@@ -61,4 +61,23 @@ public class FizzBuzzWhizzTest {
         //then
         assertThat(fizzBuzzWhizz.answer(two)).isEqualTo(String.valueOf(two));
     }
+
+    @Test
+    public void should_return_Whizz_if_number_is_times_of_the_third_special_number() {
+        //given
+        Integer seven = 7;
+        Integer fourteen = 14;
+
+        //when
+
+        //then
+        assertThat(fizzBuzzWhizz.answer(seven)).isEqualTo("Whizz");
+        assertThat(fizzBuzzWhizz.answer(fourteen)).isEqualTo("Whizz");
+    }
+
+    @Test
+    public void should_return_the_same_number_if_number_is_not_the_times_of_the_third_special_number() {
+        Integer eight = 8;
+        assertThat(fizzBuzzWhizz.answer(eight)).isEqualTo(String.valueOf(eight));
+    }
 }
