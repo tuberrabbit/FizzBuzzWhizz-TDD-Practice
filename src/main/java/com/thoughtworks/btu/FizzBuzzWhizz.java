@@ -1,16 +1,21 @@
 package com.thoughtworks.btu;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class FizzBuzzWhizz {
+
+
+    private final List<Rule> rules = Arrays.asList(new FizzRule(), new BuzzRule(), new WhizzRule());
+
     public String answer(Integer number) {
-        if (number % 3 == 0) {
-            return "Fizz";
-        }
-        if (number % 5 == 0) {
-            return "Buzz";
-        }
-        if (number % 7 == 0) {
-            return "Whizz";
+        for (Rule rule : rules) {
+            if (rule.isApplicable(number)) {
+                return rule.getResult();
+            }
         }
         return String.valueOf(number);
     }
+
 }
+
