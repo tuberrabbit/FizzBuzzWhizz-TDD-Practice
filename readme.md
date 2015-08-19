@@ -61,3 +61,6 @@
 1. 假设特殊字符是3，5，7   
 2. 在number是7的倍数情况下，应该返回Whizz  
 3. 如果不是7的倍数，返回原数字。  
+
+###task 4
+add checkstyle & refactor test
