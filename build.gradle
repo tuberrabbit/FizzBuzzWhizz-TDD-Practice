@@ -8,6 +8,9 @@
  */
 
 // Apply the java plugin to add support for Java
+plugins {
+    id "net.saliman.cobertura" version "2.2.8"
+}
 apply plugin: 'java'
 apply plugin: 'idea'
 apply plugin: 'checkstyle'
@@ -31,4 +34,22 @@ dependencies {
     // 'test.useTestNG()' to your build script.
     testCompile 'junit:junit:4.12'
     testCompile 'org.assertj:assertj-core:2.1.0'
+}
+
+build.dependsOn 'cobertura'
+cobertura {
+    coberturaVersion = '2.2.8'
+    coverageEncoding = 'UTF-8'
+    coverageFormats = ['html']
+    coverageSourceDirs = ["project.sourceSets.main.java.srcDirs"]
+    coverageCheckBranchRate = 80
+    coverageCheckLineRate = 80
+    coverageCheckPackageBranchRate = 80
+    coverageCheckPackageLineRate = 80
+    coverageCheckTotalBranchRate = 80
+    coverageCheckTotalLineRate = 80
+    coverageCheckHaltOnFailure = true
+    coverageExcludes = []
+    coverageIgnoreMethodAnnotations = []
+    coverageIgnoreTrivial = true
 }
