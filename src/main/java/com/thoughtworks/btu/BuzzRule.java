@@ -1,6 +1,6 @@
 package com.thoughtworks.btu;
 
-public class BuzzRule implements Rule{
+public class BuzzRule implements Rule {
     public static final String BUZZ = "Buzz";
     public static final int DIVISOR_OF_BUZZ = 5;
 
