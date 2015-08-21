@@ -16,35 +16,59 @@ public class FizzBuzzWhizzTest {
 
     @Test
     public void should_return_Fizz_if_number_comform_the_FizzRule() {
-        Integer number = FizzRule.DIVISOR_OF_FIZZ;
-        assertThat(fizzBuzzWhizz.answer(number)).isEqualTo(FizzRule.FIZZ);
+        assertThat(fizzBuzzWhizz.answer(3)).isEqualTo(FizzRule.FIZZ);
 
-        number = FizzRule.DIVISOR_OF_FIZZ * 2;
-        assertThat(fizzBuzzWhizz.answer(number)).isEqualTo(FizzRule.FIZZ);
+        assertThat(fizzBuzzWhizz.answer(6)).isEqualTo(FizzRule.FIZZ);
     }
 
     @Test
     public void should_return_Buzz_if_number_comform_the_BuzzRule() {
-        Integer number = BuzzRule.DIVISOR_OF_BUZZ;
-        assertThat(fizzBuzzWhizz.answer(number)).isEqualTo(BuzzRule.BUZZ);
+        assertThat(fizzBuzzWhizz.answer(5)).isEqualTo(BuzzRule.BUZZ);
 
-        number = BuzzRule.DIVISOR_OF_BUZZ * 2;
-        assertThat(fizzBuzzWhizz.answer(number)).isEqualTo(BuzzRule.BUZZ);
+        assertThat(fizzBuzzWhizz.answer(10)).isEqualTo(BuzzRule.BUZZ);
     }
 
     @Test
     public void should_return_Whizz_if_number_comform_the_WhizzRule() {
-        Integer number = WhizzRule.DIVISOR_OF_WHIZZ;
-        assertThat(fizzBuzzWhizz.answer(number)).isEqualTo(WhizzRule.WHIZZ);
+        assertThat(fizzBuzzWhizz.answer(7)).isEqualTo(WhizzRule.WHIZZ);
 
-        number = WhizzRule.DIVISOR_OF_WHIZZ * 2;
-        assertThat(fizzBuzzWhizz.answer(number)).isEqualTo(WhizzRule.WHIZZ);
+        assertThat(fizzBuzzWhizz.answer(14)).isEqualTo(WhizzRule.WHIZZ);
 
     }
 
     @Test
-    public void should_return_origin_number_if_number_no_comform_Rule() {
-        assertThat(fizzBuzzWhizz.answer(2)).isEqualTo("2");
+    public void should_return_origin_number_if_number_comform_the_NomalRule() {
+        assertThat(fizzBuzzWhizz.answer(1)).isEqualTo(String.valueOf((Integer) 1));
+
+    }
+
+    @Test
+    public void should_return_FizzBuzz_if_number_comform_the_FizzBuzzRule() {
+        assertThat(fizzBuzzWhizz.answer(15)).isEqualTo(FizzBuzzRule.FIZZ_BUZZ);
+
+    }
+
+    @Test
+    public void should_return_FizzWhizz_if_number_comform_the_FizzWhizzRule() {
+        assertThat(fizzBuzzWhizz.answer(21)).isEqualTo(FizzWhizzRule.FIZZ_WHIZZ);
+
+    }
+
+    @Test
+    public void should_return_BuzzWhizz_if_number_comform_the_BuzzWhizzRule() {
+        assertThat(fizzBuzzWhizz.answer(70)).isEqualTo(BuzzWhizzRule.BUZZ_WHIZZ);
+
+    }
+
+    @Test
+    public void should_return_FizzBuzzWhizz_if_number_comform_the_FizzBuzzWhizzRule() {
+        assertThat(fizzBuzzWhizz.answer(105)).isEqualTo(FizzBuzzWhizzRule.FIZZ_BUZZ_WHIZZ);
+
+    }
+
+    @Test
+    public void should_return_Fizz_if_number_comform_the_FizzDigitalRule() {
+        assertThat(fizzBuzzWhizz.answer(13)).isEqualTo(FizzDigitalRule.FIZZ);
 
     }
 }
