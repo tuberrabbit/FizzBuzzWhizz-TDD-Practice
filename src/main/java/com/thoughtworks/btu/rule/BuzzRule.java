@@ -2,7 +2,7 @@ package com.thoughtworks.btu.rule;
 
 public class BuzzRule implements Rule {
     public static final String BUZZ = "Buzz";
-    private Integer divisorOfBuzz = 5;
+    private Integer divisorOfBuzz;
 
     public BuzzRule(Integer buzzNumber) {
         divisorOfBuzz = buzzNumber;

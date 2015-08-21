@@ -2,7 +2,7 @@ package com.thoughtworks.btu.rule;
 
 public class FizzDigitalRule implements Rule {
     public static final String FIZZ = "Fizz";
-    private Integer digitalOfFizz = 3;
+    private Integer digitalOfFizz;
 
     public FizzDigitalRule(Integer fizzNumber) {
         digitalOfFizz = fizzNumber;

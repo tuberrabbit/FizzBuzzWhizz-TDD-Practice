@@ -2,7 +2,7 @@ package com.thoughtworks.btu.rule;
 
 public class FizzWhizzRule implements Rule {
     public static final String FIZZ_WHIZZ = "FizzWhizz";
-    private Integer divisorOfFizzWhizz = 21;
+    private Integer divisorOfFizzWhizz;
 
     public FizzWhizzRule(Integer fizzNumber, Integer whizzNumber) {
         divisorOfFizzWhizz = fizzNumber * whizzNumber;
