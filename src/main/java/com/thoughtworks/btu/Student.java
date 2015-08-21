@@ -12,10 +12,7 @@ public class Student {
     }
 
     public String answer(Rule rule) {
-        if (rule.isApplicable(location)) {
-            return rule.getResult();
-        }
-        return String.valueOf(location);
+        return rule.isApplicable(location) ? rule.getResult() : "";
     }
 
 }
