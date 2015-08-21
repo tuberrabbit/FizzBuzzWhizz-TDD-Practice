@@ -104,3 +104,7 @@ rename class name
 
 ###task 14
 创建命令行窗口启动入口Launcher.java
+
+###task 15
+重新考虑OO设计思想
+产生三个对象RuleFactory Teacher Student
