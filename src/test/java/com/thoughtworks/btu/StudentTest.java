@@ -21,6 +21,7 @@ public class StudentTest {
     @Before
     public void setUp() {
         this.student = new Student();
+        Teacher.build(3, 5, 7);
     }
 
     @Test

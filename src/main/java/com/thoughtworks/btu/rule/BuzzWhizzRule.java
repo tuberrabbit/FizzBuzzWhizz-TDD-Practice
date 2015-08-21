@@ -2,11 +2,15 @@ package com.thoughtworks.btu.rule;
 
 public class BuzzWhizzRule implements Rule {
     public static final String BUZZ_WHIZZ = "BuzzWhizz";
-    private static final Integer DIVISOR_OF_BUZZ_WHIZZ = 35;
+    private Integer divisorOfBuzzWhizz = 35;
+
+    public BuzzWhizzRule(Integer buzzNumber, Integer whizzNumber) {
+        divisorOfBuzzWhizz = buzzNumber * whizzNumber;
+    }
 
     @Override
     public boolean isApplicable(Integer number) {
-        return number % DIVISOR_OF_BUZZ_WHIZZ == 0;
+        return number % divisorOfBuzzWhizz == 0;
     }
 
     @Override

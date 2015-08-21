@@ -2,11 +2,15 @@ package com.thoughtworks.btu.rule;
 
 public class FizzWhizzRule implements Rule {
     public static final String FIZZ_WHIZZ = "FizzWhizz";
-    private static final Integer DIVISOR_OF_FIZZ_WHIZZ = 21;
+    private Integer divisorOfFizzWhizz = 21;
+
+    public FizzWhizzRule(Integer fizzNumber, Integer whizzNumber) {
+        divisorOfFizzWhizz = fizzNumber * whizzNumber;
+    }
 
     @Override
     public boolean isApplicable(Integer number) {
-        return number % DIVISOR_OF_FIZZ_WHIZZ == 0;
+        return number % divisorOfFizzWhizz == 0;
     }
 
     @Override

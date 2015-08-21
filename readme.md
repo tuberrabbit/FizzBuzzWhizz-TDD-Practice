@@ -98,3 +98,6 @@ add checkstyle & refactor test
 
 ###task 12
 rename class name
+
+###task 13
+老师说出三个特殊数字，并且生成相应的规则
