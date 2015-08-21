@@ -11,7 +11,7 @@ public class Student {
                 return rule.getResult();
             }
         }
-        return null;
+        return String.valueOf(number);
     }
 
 }
