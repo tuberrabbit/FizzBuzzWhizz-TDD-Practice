@@ -1,4 +1,4 @@
-package com.thoughtworks.btu;
+package com.thoughtworks.btu.rule;
 
 public class BuzzWhizzRule implements Rule {
     public static final String BUZZ_WHIZZ = "BuzzWhizz";

@@ -1,5 +1,14 @@
 package com.thoughtworks.btu;
 
+import com.thoughtworks.btu.rule.FizzBuzzRule;
+import com.thoughtworks.btu.rule.FizzBuzzWhizzRule;
+import com.thoughtworks.btu.rule.FizzDigitalRule;
+import com.thoughtworks.btu.rule.FizzWhizzRule;
+import com.thoughtworks.btu.rule.BuzzWhizzRule;
+import com.thoughtworks.btu.rule.FizzRule;
+import com.thoughtworks.btu.rule.BuzzRule;
+import com.thoughtworks.btu.rule.WhizzRule;
+
 import org.junit.Before;
 import org.junit.Test;
 

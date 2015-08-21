@@ -1,4 +1,4 @@
-package com.thoughtworks.btu;
+package com.thoughtworks.btu.rule;
 
 public class NomalRule implements Rule {
     private Integer number;
