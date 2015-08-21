@@ -89,3 +89,6 @@ add checkstyle & refactor test
 1. 假设特殊字符是3，5，7   
 2. 在number包含3的情况下，应该返回Fizz  
 3. 如果不是，返回原数字。  
+
+###task 10
+把Rule归类到新的包路径下
