@@ -40,7 +40,7 @@ build.dependsOn 'cobertura'
 cobertura {
     coverageEncoding = 'UTF-8'
     coverageFormats = ['html']
-    coverageSourceDirs = ["project.sourceSets.main.java.srcDirs"]
+    coverageSourceDirs = ['project.sourceSets.main.java.srcDirs']
     coverageCheckBranchRate = 80
     coverageCheckLineRate = 80
     coverageCheckPackageBranchRate = 80
@@ -48,7 +48,7 @@ cobertura {
     coverageCheckTotalBranchRate = 80
     coverageCheckTotalLineRate = 80
     coverageCheckHaltOnFailure = true
-    coverageExcludes = []
+    coverageExcludes = ['.*com.thoughtworks.btu.Launcher.*']
     coverageIgnoreMethodAnnotations = []
     coverageIgnoreTrivial = true
 }
