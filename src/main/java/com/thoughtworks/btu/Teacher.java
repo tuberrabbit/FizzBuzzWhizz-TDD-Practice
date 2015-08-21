@@ -15,8 +15,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Teacher {
-    private static List<Rule> rules = new ArrayList<>();
+    private static List<Rule> rules;
     public static void build(Integer fizzNumber, Integer buzzNumber, Integer whizzNumber) {
+        rules = new ArrayList<>();
         rules.add(new FizzDigitalRule(fizzNumber));
         rules.add(new FizzBuzzWhizzRule(fizzNumber, buzzNumber, whizzNumber));
         rules.add(new FizzBuzzRule(fizzNumber, buzzNumber));

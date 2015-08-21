@@ -101,3 +101,6 @@ rename class name
 
 ###task 13
 老师说出三个特殊数字，并且生成相应的规则
+
+###task 14
+创建命令行窗口启动入口Launcher.java
