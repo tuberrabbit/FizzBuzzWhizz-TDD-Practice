@@ -38,7 +38,6 @@ dependencies {
 
 build.dependsOn 'cobertura'
 cobertura {
-    coberturaVersion = '2.2.8'
     coverageEncoding = 'UTF-8'
     coverageFormats = ['html']
     coverageSourceDirs = ["project.sourceSets.main.java.srcDirs"]
