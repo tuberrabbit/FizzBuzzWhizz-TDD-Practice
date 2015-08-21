@@ -14,11 +14,11 @@ import com.thoughtworks.btu.rule.NomalRule;
 import java.util.Arrays;
 import java.util.List;
 
-public final class RuleOwner {
+public final class Teacher {
     public static final List<Rule> RULES = Arrays.asList(new FizzDigitalRule(), new FizzBuzzWhizzRule(), new FizzBuzzRule(),
             new FizzWhizzRule(), new BuzzWhizzRule(), new FizzRule(), new BuzzRule(), new WhizzRule(), new NomalRule());
 
-    private RuleOwner() {
+    private Teacher() {
     }
 
 }

@@ -92,3 +92,9 @@ add checkstyle & refactor test
 
 ###task 10
 把Rule归类到新的包路径下
+
+###task 11
+生成新的工厂类RuleOwner
+
+###task 12
+rename class name
