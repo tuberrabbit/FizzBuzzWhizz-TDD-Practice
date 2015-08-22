@@ -37,7 +37,7 @@ public class StudentTest {
 
     @Test
     public void should_return_Fizz_if_the_student_conform_FizzRule() {
-        Student student = new Student(3);
+        Student student = new Student(6);
         assertThat(student.say(rules)).isEqualTo("Fizz");
 
     }

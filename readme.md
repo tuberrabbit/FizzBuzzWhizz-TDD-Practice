@@ -115,5 +115,5 @@ refactoring
 
 ###task 17
 问题：
-1. 考虑什么对象需要被mock（如：在StudentTest中的Rule需要mock吗？）
+1. 考虑什么对象需要被mock（如：在StudentTest中的Rule需要mock吗？还有RuleFactoryTest.java中得Teacher Object）
 2. 我觉得Student还是要根据Rules去判断而不是单一得Rule（栗子如：35应该是Fizz而不是BuzzWhizz）

@@ -20,7 +20,6 @@ public class RuleFactory {
         rules.add(new FizzRule(fizzNumber));
         rules.add(new BuzzRule(buzzNumber));
         rules.add(new WhizzRule(whizzNumber));
-        rules.add(new NomalRule());
 
         return rules;
     }
