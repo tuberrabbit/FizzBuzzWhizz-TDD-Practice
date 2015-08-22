@@ -34,6 +34,7 @@ dependencies {
     // 'test.useTestNG()' to your build script.
     testCompile 'junit:junit:4.12'
     testCompile 'org.assertj:assertj-core:2.1.0'
+    testCompile 'org.mockito:mockito-all:1.10.19'
 }
 
 build.dependsOn 'cobertura'
