@@ -16,15 +16,23 @@ public class Launcher {
             Teacher teacher = new Teacher();
             teacher.say(scanner.nextInt(), scanner.nextInt(), scanner.nextInt());
             List<Rule> rules = RuleFactory.build(teacher);
-            for (int i = 0; i < COUNT; ++i) {
-                Integer location = i + 1;
-                Student student = new Student(location);
-                for (Rule rule : rules) {
-                    if (student.isConformBy(rule)) {
-                        System.out.println(student.say());
-                        break;
-                    }
-                }
+            studentCountOff(rules);
+        }
+    }
+
+    private static void studentCountOff(List<Rule> rules) {
+        for (int i = 0; i < COUNT; ++i) {
+            Integer location = i + 1;
+            Student student = new Student(location);
+            answerBy(rules, student);
+        }
+    }
+
+    private static void answerBy(List<Rule> rules, Student student) {
+        for (Rule rule : rules) {
+            if (student.isConformBy(rule)) {
+                System.out.println(student.say());
+                return;
             }
         }
     }

@@ -41,7 +41,6 @@ build.dependsOn 'cobertura'
 cobertura {
     coverageEncoding = 'UTF-8'
     coverageFormats = ['html']
-    coverageSourceDirs = ['project.sourceSets.main.java.srcDirs']
     coverageCheckBranchRate = 80
     coverageCheckLineRate = 80
     coverageCheckPackageBranchRate = 80
