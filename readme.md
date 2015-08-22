@@ -108,3 +108,12 @@ rename class name
 ###task 15
 重新考虑OO设计思想
 产生三个对象RuleFactory Teacher Student
+
+###task 16
+refactoring
+考虑Student行为的合理性
+
+###task 17
+问题：
+1. 考虑什么对象需要被mock（如：在StudentTest中的Rule需要mock吗？）
+2. 我觉得Student还是要根据Rules去判断而不是单一得Rule（栗子如：35应该是Fizz而不是BuzzWhizz）

@@ -3,26 +3,23 @@ package com.thoughtworks.btu;
 
 import com.thoughtworks.btu.rule.Rule;
 
+import java.util.List;
+
 public class Student {
 
     private final Integer location;
-    private String answer;
 
     public Student(Integer location) {
         this.location = location;
-        this.answer = String.valueOf(location);
     }
 
-    public boolean isConformBy(Rule rule) {
-        if (rule.isApplicable(location)) {
-            this.answer = rule.getResult();
-            return true;
+    public String say(List<Rule> rules) {
+        for (Rule rule : rules) {
+            if (rule.isApplicable(location)) {
+                return rule.getResult();
+            }
         }
-        return false;
-    }
-
-    public String say() {
-        return answer;
+        return String.valueOf(location);
     }
 }
 
