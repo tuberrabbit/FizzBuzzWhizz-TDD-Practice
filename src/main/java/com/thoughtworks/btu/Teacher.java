@@ -17,10 +17,9 @@ public class Teacher {
         return whizzNumber;
     }
 
-    public boolean say(Integer fizzNumber, Integer buzzNumber, Integer whizzNumber) {
+    public void say(Integer fizzNumber, Integer buzzNumber, Integer whizzNumber) {
         this.fizzNumber = fizzNumber;
         this.buzzNumber = buzzNumber;
         this.whizzNumber = whizzNumber;
-        return true;
     }
 }
