@@ -19,7 +19,8 @@ public class StudentTest {
     public void should_return_Fizz_if_the_student_conform_FizzRule() {
         Student student = new Student(3);
         Rule rule = new FizzRule(3);
-        assertThat(student.answer(rule)).isEqualTo("Fizz");
+        assertThat(student.isConformBy(rule)).isTrue();
+        assertThat(student.say()).isEqualTo("Fizz");
 
     }
 
@@ -27,7 +28,8 @@ public class StudentTest {
     public void should_return_Buzz_if_the_student_conform_BuzzRule() {
         Student student = new Student(5);
         Rule rule = new BuzzRule(5);
-        assertThat(student.answer(rule)).isEqualTo("Buzz");
+        assertThat(student.isConformBy(rule)).isTrue();
+        assertThat(student.say()).isEqualTo("Buzz");
 
     }
 
@@ -35,7 +37,8 @@ public class StudentTest {
     public void should_return_Whizz_if_the_student_conform_WhizzRule() {
         Student student = new Student(7);
         Rule rule = new WhizzRule(7);
-        assertThat(student.answer(rule)).isEqualTo("Whizz");
+        assertThat(student.isConformBy(rule)).isTrue();
+        assertThat(student.say()).isEqualTo("Whizz");
 
     }
 
@@ -43,7 +46,8 @@ public class StudentTest {
     public void should_return_FizzBuzz_if_the_student_conform_FizzBuzzRule() {
         Student student = new Student(15);
         Rule rule = new FizzBuzzRule(3, 5);
-        assertThat(student.answer(rule)).isEqualTo("FizzBuzz");
+        assertThat(student.isConformBy(rule)).isTrue();
+        assertThat(student.say()).isEqualTo("FizzBuzz");
 
     }
 
@@ -51,7 +55,8 @@ public class StudentTest {
     public void should_return_FizzWhizz_if_the_student_conform_FizzWhizzRule() {
         Student student = new Student(21);
         Rule rule = new FizzWhizzRule(3, 7);
-        assertThat(student.answer(rule)).isEqualTo("FizzWhizz");
+        assertThat(student.isConformBy(rule)).isTrue();
+        assertThat(student.say()).isEqualTo("FizzWhizz");
 
     }
 
@@ -59,7 +64,8 @@ public class StudentTest {
     public void should_return_BuzzWhizz_if_the_student_conform_BuzzWhizzRule() {
         Student student = new Student(35);
         Rule rule = new BuzzWhizzRule(5, 7);
-        assertThat(student.answer(rule)).isEqualTo("BuzzWhizz");
+        assertThat(student.isConformBy(rule)).isTrue();
+        assertThat(student.say()).isEqualTo("BuzzWhizz");
 
     }
 
@@ -67,7 +73,8 @@ public class StudentTest {
     public void should_return_FizzBuzzWhizz_if_the_student_conform_FizzBuzzWhizzRule() {
         Student student = new Student(105);
         Rule rule = new FizzBuzzWhizzRule(3, 5, 7);
-        assertThat(student.answer(rule)).isEqualTo("FizzBuzzWhizz");
+        assertThat(student.isConformBy(rule)).isTrue();
+        assertThat(student.say()).isEqualTo("FizzBuzzWhizz");
 
     }
 
@@ -75,7 +82,8 @@ public class StudentTest {
     public void should_return_Fizz_if_the_student_conform_FizzDigitalRule() {
         Student student = new Student(13);
         Rule rule = new FizzDigitalRule(3);
-        assertThat(student.answer(rule)).isEqualTo("Fizz");
+        assertThat(student.isConformBy(rule)).isTrue();
+        assertThat(student.say()).isEqualTo("Fizz");
 
     }
 
@@ -83,7 +91,8 @@ public class StudentTest {
     public void should_return_origin_number_if_the_student_not_conform_any_Rule() {
         Student student = new Student(1);
         Rule rule = new NomalRule();
-        assertThat(student.answer(rule)).isEqualTo("1");
+        assertThat(student.isConformBy(rule)).isTrue();
+        assertThat(student.say()).isEqualTo("1");
 
     }
 }
