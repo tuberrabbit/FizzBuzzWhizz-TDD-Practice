@@ -24,8 +24,8 @@ public class Launcher {
 
     private static void iterateStudentToCountOff(List<Rule> rules) {
         for (int i = 0; i < COUNT_OF_STUDENTS; ++i) {
-            Student student = new Student(i + 1);
-            System.out.println(student.say(rules));
+            Student student = new Student(i + 1, rules);
+            System.out.println(student.answer());
         }
     }
 

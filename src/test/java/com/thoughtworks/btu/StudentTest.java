@@ -37,64 +37,64 @@ public class StudentTest {
 
     @Test
     public void should_return_Fizz_if_the_student_conform_FizzRule() {
-        Student student = new Student(6);
-        assertThat(student.say(rules)).isEqualTo("Fizz");
+        Student student = new Student(6, rules);
+        assertThat(student.answer()).isEqualTo("Fizz");
 
     }
 
     @Test
     public void should_return_Buzz_if_the_student_conform_BuzzRule() {
-        Student student = new Student(5);
-        assertThat(student.say(rules)).isEqualTo("Buzz");
+        Student student = new Student(5, rules);
+        assertThat(student.answer()).isEqualTo("Buzz");
 
     }
 
     @Test
     public void should_return_Whizz_if_the_student_conform_WhizzRule() {
-        Student student = new Student(7);
-        assertThat(student.say(rules)).isEqualTo("Whizz");
+        Student student = new Student(7, rules);
+        assertThat(student.answer()).isEqualTo("Whizz");
 
     }
 
     @Test
     public void should_return_FizzBuzz_if_the_student_conform_FizzBuzzRule() {
-        Student student = new Student(15);
-        assertThat(student.say(rules)).isEqualTo("FizzBuzz");
+        Student student = new Student(15, rules);
+        assertThat(student.answer()).isEqualTo("FizzBuzz");
 
     }
 
     @Test
     public void should_return_FizzWhizz_if_the_student_conform_FizzWhizzRule() {
-        Student student = new Student(21);
-        assertThat(student.say(rules)).isEqualTo("FizzWhizz");
+        Student student = new Student(21, rules);
+        assertThat(student.answer()).isEqualTo("FizzWhizz");
 
     }
 
     @Test
     public void should_return_BuzzWhizz_if_the_student_conform_BuzzWhizzRule() {
-        Student student = new Student(70);
-        assertThat(student.say(rules)).isEqualTo("BuzzWhizz");
+        Student student = new Student(70, rules);
+        assertThat(student.answer()).isEqualTo("BuzzWhizz");
 
     }
 
     @Test
     public void should_return_FizzBuzzWhizz_if_the_student_conform_FizzBuzzWhizzRule() {
-        Student student = new Student(105);
-        assertThat(student.say(rules)).isEqualTo("FizzBuzzWhizz");
+        Student student = new Student(105, rules);
+        assertThat(student.answer()).isEqualTo("FizzBuzzWhizz");
 
     }
 
     @Test
     public void should_return_Fizz_if_the_student_conform_FizzDigitalRule() {
-        Student student = new Student(35);
-        assertThat(student.say(rules)).isEqualTo("Fizz");
+        Student student = new Student(35, rules);
+        assertThat(student.answer()).isEqualTo("Fizz");
 
     }
 
     @Test
     public void should_return_origin_number_if_the_student_not_conform_any_Rule() {
-        Student student = new Student(1);
-        assertThat(student.say(rules)).isEqualTo("1");
+        Student student = new Student(1, rules);
+        assertThat(student.answer()).isEqualTo("1");
 
     }
 }

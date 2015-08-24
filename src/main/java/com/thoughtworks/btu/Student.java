@@ -8,12 +8,14 @@ import java.util.List;
 public class Student {
 
     private final Integer location;
+    private final List<Rule> rules;
 
-    public Student(Integer location) {
+    public Student(Integer location, List<Rule> rules) {
         this.location = location;
+        this.rules = rules;
     }
 
-    public String say(List<Rule> rules) {
+    public String answer() {
         for (Rule rule : rules) {
             if (rule.isApplicable(location)) {
                 return rule.getResult();
